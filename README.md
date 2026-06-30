@@ -17,5 +17,7 @@ Also regarding Pest tests, in the scope of this test task I wrote Pest tests onl
 ## How to run
 
 `composer install`
+
 `php demo.php`
+
 `composer test`
