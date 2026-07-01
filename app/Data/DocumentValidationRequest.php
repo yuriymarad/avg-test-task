@@ -12,8 +12,8 @@ use App\Values\DocumentValidationRuleSet;
 final readonly class DocumentValidationRequest
 {
     public function __construct(
-        public Tenant $tenant,
-        public Document $document,
+        private Tenant $tenant,
+        private Document $document,
         private DocumentValidationRuleSet $rules,
     ) {
         if ($tenant->id !== $document->tenantId) {
@@ -28,5 +28,10 @@ final readonly class DocumentValidationRequest
     public function rules(): DocumentValidationRuleSet
     {
         return $this->rules;
+    }
+
+    public function document(): Document
+    {
+        return $this->document;
     }
 }

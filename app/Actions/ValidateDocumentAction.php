@@ -17,6 +17,6 @@ final class ValidateDocumentAction
 
     public function execute(DocumentValidationRequest $request): DocumentValidationResult
     {
-        return $this->validator->validate($request->document, $request->rules());
+        return $this->validator->validate($request->document(), $request->rules());
     }
 }

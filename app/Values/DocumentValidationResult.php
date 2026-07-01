@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Values;
 
-final class DocumentValidationResult
+final readonly class DocumentValidationResult
 {
     public function __construct(
-        public readonly array $violations,
+        public array $violations,
     ) {
     }
 
